@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Lockboxes file"""
+
+
 def recursion(boxes, current_box, box_opened):
     """
     Using recursion to solve this problem
