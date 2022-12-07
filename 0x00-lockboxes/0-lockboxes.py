@@ -24,8 +24,15 @@ def canUnlockAll(boxes):
         if type(boxes[0]) != list:
             return False
 
-    box_opened = recursion(boxes, boxes[0], [])
-    len_box_opened = len(box_opened) + 1
-    if len(boxes) == len_box_opened:
+    box_opened = []
+    box_opened.append(0)
+
+    for box in box_opened:
+        for item in boxes[box]:
+            if (item in box_opened or item == box or item == 0):
+                continue
+            box_opened.append(item)
+
+    if len(box_opened) == len(boxes):
         return True
     return False
