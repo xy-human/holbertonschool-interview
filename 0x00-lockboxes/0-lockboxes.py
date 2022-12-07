@@ -18,6 +18,12 @@ def canUnlockAll(boxes):
     """
     Main function call recursion()
     """
+    if not boxes:
+        return False
+    if len(boxes) == 1:
+        if type(boxes[0]) != list:
+            return False
+
     box_opened = recursion(boxes, boxes[0], [])
     len_box_opened = len(box_opened) + 1
     if len(boxes) == len_box_opened:
