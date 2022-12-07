@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 def recursion(boxes, current_box, box_opened):
     """
     Using recursion to solve this problem
